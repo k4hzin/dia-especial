@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>EU AMO VOCÊ TAMBÉM</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+QLD:wght@100..400&display=swap');
+
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('imagens/fundo.jpg'); /* verifique se o caminho está correto */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: rgb(243, 97, 97);
+
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .overlay.hidden {
+      display: none;
+    }
+
+    .popup {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      position: relative;
+      color: black;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+    }
+
+    .popup button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn1 {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn2 {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .reopen-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f8735b;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+    }
+
+    .texto-centralizado {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+   p{
+ 
+  font-family: "Playwrite AU QLD", cursive;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+  </style>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        overflow-x: hidden;
+        box-sizing: border-box;
+      }
+
+      p {
+        max-width: 90%;
+        margin: 0 auto;
+        word-wrap: break-word;
+      }
+
+      h1, h2, h3 {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      button {
+        max-width: 90%;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+    
+</head>
+<body>
+
+  <!-- Pop-up -->
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <button class="close-btn" onclick="fecharPopup()">×</button>
+      <h2>Quer voltar?</h2>
+      <button class="btn1" onclick="location.href='index.html'">Voltar ao começo</button>
+      <button class="btn2" onclick="location.href='pagina2.html'">Ir para "Não"</button>
+    </div>
+  </div>
+
+  <!-- Conteúdo do site -->
+ <div class="texto-centralizado">
+    <h1>EU AMO VOCÊ TAMBÉM 💖</h1>
+    <p>Olá, minha vida. obrigado por escolher o sim (vamos ignorar o fato que você testou o não). eu quero te dizer tudo que sinto por você, como se fosse uma carta.
+        você é a coisa mais especial que apareceu na minha vida. tudo oque você faz me deixa feliz. você é alguem maravilhosa de se conviver, é alguem incrivel de estar ao lado, e eu simplesmente amo cada coisa que você me mostra todos os dias.
+        quero passar ainda mais tempo ao seu lado, viver experiencias inesqueciveis e maravilhosas com você
+        quero que você saiba que eu amo muito você, e a cada dia passo a amar mais e mais, espero que eu possa te fazer a garota mais feliz do mundo. 
+                                    te amo muito, meu amor
+    </p>
+    <button class="reopen-btn" onclick="abrirPopup()">Abrir pop-up novamente</button>
+  </div>
+
+  <script>
+    function fecharPopup() {
+      document.getElementById('popup').classList.add('hidden');
+    }
+
+    function abrirPopup() {
+      document.getElementById('popup').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>

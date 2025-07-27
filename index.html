@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>ANIVERSÁRIO DO MEU AMORZINHO</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url('imagens/fundo 2.jpg'); /* Verifique se o caminho está certo */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      color: rgb(255, 69, 79);
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .overlay.hidden {
+      display: none;
+    }
+
+    .popup {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      position: relative;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+    }
+
+    .popup button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn1 {
+      background-color: #3498db;
+      color: white;
+    }
+
+    .btn2 {
+      background-color: #2ecc71;
+      color: white;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      cursor: pointer;
+      color: #888;
+    }
+
+    .close-btn:hover {
+      color: #000;
+    }
+
+    .reopen-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #f84646;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        text-align: center;
+        overflow-x: hidden;
+        box-sizing: border-box;
+      }
+
+      p {
+        max-width: 90%;
+        margin: 0 auto;
+        word-wrap: break-word;
+      }
+
+      h1, h2, h3 {
+        max-width: 90%;
+        margin: 0 auto;
+      }
+
+      button {
+        max-width: 90%;
+        padding: 10px 20px;
+        margin: 10px;
+        font-size: 1rem;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          padding: 10px;
+        }
+      }
+    </style>
+    
+</head>
+<body>
+
+  <!-- Pop-up -->
+  <div class="overlay" id="popup">
+    <div class="popup">
+      <button class="close-btn" onclick="fecharPopup()">×</button>
+      <h2>Vose mim ama?</h2>
+      <button class="btn1" onclick="location.href='pagina.html'">SIM</button>
+      <button class="btn2" onclick="location.href='pagina2.html'">NÃO</button>
+    </div>
+  </div>
+
+  <!-- Conteúdo do site -->
+  <div>
+    <h1>OI MEU AMOR, FELIZ ANIVERSÁRIO 💖</h1>
+    <p>Quero te dizer que te amo muito, e espero que esse seja um dia lindo na sua vida.<br>
+    Vou fazer tudo o que posso pra te deixar o mais feliz possível hoje</p>
+    <button class="reopen-btn" onclick="abrirPopup()">Continuar</button>
+  </div>
+
+  <script>
+    function fecharPopup() {
+      document.getElementById('popup').classList.add('hidden');
+    }
+
+    function abrirPopup() {
+      document.getElementById('popup').classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
